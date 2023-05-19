@@ -115,8 +115,7 @@ if ($r1 == "1") {
   </div>
   <!-- /.container-fluid -->
 </nav>
-<?php include"active_sellers/rdp_records";?>
-
+<?php include"active_sellers/rdp_record.php";?>
 <div id="mainDiv"></div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
