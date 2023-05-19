@@ -42,3 +42,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <meta charset="utf-8">
 <title>FeluxShop</title>
 </head>
+
+
+<style>
+
