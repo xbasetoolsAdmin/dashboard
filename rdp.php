@@ -17,7 +17,7 @@ style>.display td{background:var(--color-card);color:var(--font-color)}.dataTabl
 include "body/stylesheet_css.php";
 
 ?>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js" integrity="sha512-oVbWSv2O4y1UzvExJMHaHcaib4wsBMS5tEP3/YkMP6GmkwRJAa79Jwsv+Y/w7w2Vb/98/Xhvck10LyJweB8Jsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="ajax/rdp_data.js"></script>
      <style>
             .navbar {
