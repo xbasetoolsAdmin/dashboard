@@ -1,4 +1,184 @@
 
+<style>
+    .display td {
+        background: var(--color-card);
+        color: var(--font-color);
+ 
+    }
+ 
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+ 
+        color: var(--font-color);
+ 
+    }
+ 
+    #account_data_paginate .paginate_button {
+        color: var(--font-color);
+ 
+    }
+ 
+    .alert-info {
+        color: var(--color-info);
+        background-color: var(--color-backinfo);
+        border-color: var(--color-borderinfo);
+ 
+    }
+ 
+    #account_data_filter {
+        color: var(--font-color);
+    }
+ 
+    #account_data_length {
+        color: var(--font-color);
+    }
+ 
+    #account_data_paginate {
+        color: var(--font-color);
+    }
+ 
+    #account_data_info {
+        color: var(--font-color);
+    }
+</style>
+ 
+<body class="them">
+    <style>
+        .navbar-nav .dropdown-menu {
+            margin: 0 !important
+        }
+ 
+        .theme-light {
+            --color-primary: #0060df;
+            --color-secondary: #ffffff;
+            --color-secondary2: #ecf0f1;
+            --color-accent: #fd6f53;
+            --font-color: #000000;
+            --color-nav: #ffffff;
+            --color-dropdown: #ffffff;
+            --color-card: #ffffff;
+            --color-card2: #d1ecf1;
+            --color-info: #0c5460;
+            --color-backinfo: #d1ecf1;
+            --color-borderinfo: #bee5eb;
+ 
+        }
+ 
+        .theme-dark {
+            --color-primary: #17ed90;
+            --color-secondary: #353B50;
+            --color-secondary2: #353B50;
+            --color-accent: #12cdea;
+            --font-color: #ffffff;
+            --color-nav: #363947;
+            --color-dropdown: rgba(171, 205, 239, 0.3);
+            --color-card: #262A37;
+            --color-card2: #262A37;
+            --color-info: #4DD0E1;
+            --color-backinfo: #262A37;
+            --color-borderinfo: #262A37;
+        }
+ 
+        .them {
+ 
+            background: var(--color-secondary);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+        .them h1 {
+            color: var(--font-color);
+            font-family: sans-serif;
+        }
+ 
+        .card-body {
+            color: var(--font-color);
+        }
+ 
+        .them button {
+            color: var(--font-color);
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border: 0;
+            border-radius: 5px;
+        }
+ 
+        .navbar.navbar-light .navbar-toggler {
+            color: var(--font-color);
+        }
+ 
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+ 
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+ 
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+ 
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 40px;
+            width: 40px;
+            left: 0px;
+            bottom: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            box-shadow: 0 0px 15px #2020203d;
+            background: white url('https://i.ibb.co/FxzBYR9/night.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+ 
+        input:checked+.slider {
+            background-color: #2196f3;
+        }
+ 
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196f3;
+        }
+ 
+        input:checked+.slider:before {
+            -webkit-transform: translateX(24px);
+            -ms-transform: translateX(24px);
+            transform: translateX(24px);
+            background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+ 
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+ 
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
     <script>
         function setTheme(themeName) {
             localStorage.setItem('theme', themeName);
@@ -53,7 +233,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="rdp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-desktop fa-fw"></i> RDPs <span class="badge badge-primary">70</span></span></a>
-                        <a class="dropdown-item" href="cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-tools fa-fw"></i> cPanels <span class="badge badge-primary">16964</span></span></a>
+                        <a class="dropdown-item" href="cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-tools fa-fw"></i> cPanels <span class="badge badge-primary">16948</span></span></a>
                         <a class="dropdown-item" href="shell" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-file-code fa-fw"></i> Shells <span class="badge badge-primary">1343</span></span></a>
                         <a class="dropdown-item" href="ssh" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-linux"></i> SSH/WHM <span class="badge badge-primary">133</span></span></a>
                     </div>
@@ -63,7 +243,7 @@
                     <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-leaf fa-fw fa-sm text-success" style="margin-right: 4px;"></i>Premium</a>
                     <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="premium_shell" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Shells <span class="badge badge-primary">1023</span></span></a>
-                        <a class="dropdown-item" href="premium_cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium cPanels <span class="badge badge-primary">5834</span></span></a>
+                        <a class="dropdown-item" href="premium_cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium cPanels <span class="badge badge-primary">5831</span></span></a>
                         <a class="dropdown-item" href="premium_downloads" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Downloads <span class="badge badge-primary">8</span></span></a>
                     </div>
                 </li>
@@ -74,7 +254,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="mailer" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Mailers <span class="badge badge-primary">361</span></span></a>
-                        <a class="dropdown-item" href="smtp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope fa-fw"></i> SMTPs <span class="badge badge-primary">2145</span></span></a>
+                        <a class="dropdown-item" href="smtp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope fa-fw"></i> SMTPs <span class="badge badge-primary">2300</span></span></a>
                     </div>
                 </li>
  
@@ -215,8 +395,93 @@
         }
     </style>
     <div class="d-flex flex-row-reverse mt-0">
-        <div class="p-2"><label id="switch" class="switch">
+        <div class="p-2">
+            <label id="switch" class="switch">
                 <input type="checkbox" onchange="toggleTheme()" id="slider">
-                <span class="slider round"></span>
-            </label></div>
+                <span class="slider round">
+                </span>
+            </label>
+        </div>
     </div>
+
+    <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+        <div class="col-sm-12 table-responsive">
+            <table id="account_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+                <thead>
+                    <tr>
+                        <th data-priority="1"></th>
+                        <th class="all">ID</th>
+                        <th data-priority="3">Country</th>
+                        <th data-priority="4">website</th>
+                        <th data-priority="7">Details</th>
+                        <th data-priority="8">Price</th>
+                        <th data-priority="9">Seller</th>
+                        <th data-priority="11">Date Created</th>
+                        <th class="all">Buy</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-notify modal-success" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="heading" id="myModalHeader"></p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">×</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modelbody">
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="modal fade" id="modalConfirmBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-info" role="document">
+ 
+            <div class="modal-content text-center">
+ 
+                <div class="modal-header d-flex justify-content-center">
+                    <p class="heading">Are you sure?</p>
+                </div>
+ 
+                <div class="modal-body">
+                    <i class='fas fa-shopping-cart fa-4x animated rotateIn'></i>
+                </div>
+ 
+                <div class="modal-footer flex-center">
+                    <a onClick='confirmbye()' class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes</a>
+                    <a type="button" class="btn btn-info" data-dismiss="modal">No</a>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+ 
+ 
+    <div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-frame modal-top modal-notify modal-danger" role="document">
+ 
+            <div class="modal-content">
+ 
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <img src="layout/images/balance.png">
+                        <span class="pt-3 mx-4" style="font-size: 14 px"><b>No enough balance !</b> Please refill your balance</span>
+                        <a type="button" href="addBalance" onclick="window.open(this.href);return false;" class="btn btn-danger">Add Balance
+                            <i class="fas fa-book ml-1 white-text"></i>
+                        </a>
+                        <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+ 
+    
