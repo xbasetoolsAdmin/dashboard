@@ -11,9 +11,22 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="files/bootstrap/3/css/bootstrap.css?1" />
-<link rel="stylesheet" type="text/css" href="files/css/flags.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
+    <link rel="stylesheet" href="layout/css/bootstrap.css" />
+    <link rel="stylesheet" href="layout/css/bootstrap.css" />
+    <link rel="stylesheet" href="layout/css/bootstrap.css" />
+        <link rel="stylesheet" href="layout/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
+    <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
+    <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
+<link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
+
+<link rel="stylesheet" href="files/css/flags.css" />
+
+
+
 <script type="text/javascript" src="files/js/jquery.js?1"></script>
 <script type="text/javascript" src="files/bootstrap/3/js/bootstrap.js?1"></script>
 <script type="text/javascript" src="files/js/sorttable.js"></script>
