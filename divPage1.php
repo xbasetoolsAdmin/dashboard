@@ -10,6 +10,15 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
+
+    <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+        <ul>
+            <li> Click on check button before buy any RDP to know if it's work or not.</li>
+            <li>There is <b> 0 </b> RDPs Available.</li>
+        </ul>
+    </div>
+
+
   <ul class="nav nav-tabs">
   <li class="active"><a href="#filter" data-toggle="tab">Filter</a></li>
 </ul>
