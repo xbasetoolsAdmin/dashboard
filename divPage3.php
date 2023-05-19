@@ -10,7 +10,12 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
-
+    <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+        <ul>
+            <li> Click on check button before buy any RDP to know if it's work or not.</li>
+            <li>There is <b> 70 </b> RDPs Available.</li>
+        </ul>
+    </div>
 <ul class="nav nav-tabs">
   <li class="active"><a href="#filter" data-toggle="tab">Filter</a></li>
 </ul>
@@ -40,7 +45,6 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
 ?>
 </select></td><td><button id='filterbutton'class="btn btn-primary btn-sm" disabled>Filter <span class="glyphicon glyphicon-filter"></span></button></td></tr></tbody></table></div>
 </div>
-
 <table width="100%"  class="table table-striped table-bordered table-condensed sticky-header" id="table">
 <thead>
     <tr>
@@ -52,7 +56,6 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
       <th scope="col">Check</th>
       <th scope="col">Price</th>
       <th scope="col">Added on </th>
-
       <th scope="col">Buy (Order)</th>
     </tr>
 </thead>
