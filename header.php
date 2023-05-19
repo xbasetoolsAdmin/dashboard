@@ -15,7 +15,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
   <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" /> 
  <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FeluxShop</title>
+          <title>FeluxShop</title>
+          <link rel="shortcut icon" href="files/img/favicon.ico" />
     <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
     <link rel="stylesheet" href="layout/css/main.css" />
     <link rel="stylesheet" href="layout/css/util.css" />
@@ -23,25 +24,24 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
     <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
     <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
-<link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
-
-<link rel="stylesheet" href="files/css/flags.css" />
-
-<Link tel="stylesheet" 
-    
+    <link rel="stylesheet" href="files/bootstrap/3/css/bootstrap.css?1" />
+      
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+     <link rel="stylesheet" href="files/css/flags.css" />
+      <Link tel="stylesheet" 
                   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    
     />
 
 
-<script type="text/javascript" src="files/js/jquery.js?1"></script>
-<script type="text/javascript" src="files/bootstrap/3/js/bootstrap.js?1"></script>
-<script type="text/javascript" src="files/js/sorttable.js"></script>
-<script type="text/javascript" src="files/js/table-head.js?3334"></script>
-<script type="text/javascript" src="files/js/bootbox.min.js"></script>
-<script type="text/javascript" src="files/js/clipboard.min.js"></script>
+<script src="files/js/jquery.js"></script>
+<script src="layout/js/bootstrap.min.js"></script>
+<script src="js/jquery.datatables.min.js"></script>
+<script src="layout/js/bootbox.min.js"></script>
+<script src="layout/js/clipboard.min.js"></script>
 
-<link rel="shortcut icon" href="files/img/favicon.ico" />
 
 
 </head>
