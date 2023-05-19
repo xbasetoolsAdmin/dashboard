@@ -5,63 +5,18 @@ include "header.php";
 
 ?>
 
-#table {
-  .sortable
+<?php
+session_start();
+date_default_timezone_set('UTC');
+include "includes/config.php";
+if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
+    header("location: login.php");
+    exit();
 }
-table th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \25BE" 
-}
+$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+?>
 
-.label-as-badge {
-    border-radius: 0.5em;
-}
 
-body {
-    padding-top:50px;
-}
-table.floatThead-table {
-    border-top: none;
-    border-bottom: none;
-    background-color: #fff;
-}
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-#mydiv {
-  height: 400px;
-  position: relative;
-}
-.ajax-loader {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; /* presto! */
-
-}
-.label-primary {
-    background-color: #910606;
-}
-.btn-primary {
-    color: #ffffff;
-    background-color: #910606;
-    border-color: #910606;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    line-height: 1.1;
-    color: #910606;
-}
-
-   
-    
-
-</style>
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
