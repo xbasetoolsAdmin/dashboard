@@ -125,7 +125,7 @@ if ($r1 == "1") {
   <!-- /.container-fluid -->
 </nav>
 <?php include"active_sellers/rdp_record.php";?>
-<div id="mainDiv"></div>
+
 
 </body>
 </html>
