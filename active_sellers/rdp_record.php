@@ -1,6 +1,19 @@
 
 
 
+<?php
+ob_start();
+session_start();
+date_default_timezone_set('UTC');
+include "includes/config.php";
+
+if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
+    header("location: ../");
+    exit();
+}
+$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+?>
+
     <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
             <li> Click on check button before buy any RDP to know if it's work or not.</li>
@@ -46,3 +59,23 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `rdps` WHERE `s
 ?>
 </select></td><td><button id='filterbutton'class="btn btn-primary btn-sm" disabled>Filter <span class="glyphicon glyphicon-filter"></span></button></td></tr></tbody></table></div>
 </div>
+
+
+
+    <div class="row m-2 pt-3" style="color: var(--font-color); background-color: var(--color-card);">
+        <div class="col-sm-12 table-responsive" id="mainDiv">
+            <table id="rdp_data" class="display responsive table-hover" style="width:100%" style="color: var(--font-color); background-color: var(--color-card);">
+               <thead>
+		  <tr>
+      <th scope="col" >Country</th>
+      <th scope="col" >State</th>
+      <th scope="col" >Windows</th>
+      <th scope="col" >Ram</th>
+      <th scope="col">Access</th>
+      <th scope="col">Detect Hosting</th>
+      <th scope="col">Seller</th>
+      <th scope="col">Price</th>
+      <th scope="col">Added on </th>
+      <th scope="col">Buy</th>
+    </tr>
+</thead>
